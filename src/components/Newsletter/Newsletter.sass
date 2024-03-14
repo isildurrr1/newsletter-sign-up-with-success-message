@@ -12,6 +12,7 @@
 .text
   margin: 91px 65px
   width: 375px
+  color: #36384D
 
 .image
   width: 400px
@@ -44,6 +45,8 @@
 .label
   display: block
   font-size: 12px
+  font-weight: 700
+  letter-spacing: -0.4px
 
 .form
   margin-top: 38px
@@ -56,14 +59,21 @@
   border: 1px solid grey
   display: block
   box-sizing: border-box
-  padding: 0 24px 
+  padding: 0 24px
+  &:focus
+    border: 0.5px solid black
 
 .button
   width: 100%
   height: 56px
   border-radius: 5px
   border: none
-  background-color: black
+  background: black
   color: white
   padding-top: 5px
   letter-spacing: 0.2px
+  transition: background 1s ease
+
+  &:hover
+    background: linear-gradient(70deg, #FF5075, #FF6B3C)
+    transition: background 1s ease
