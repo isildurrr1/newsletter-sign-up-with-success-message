@@ -1,12 +1,17 @@
-// import Newsletter from '../Newsletter/Newsletter';
+import { useState } from 'react';
+import Newsletter from '../Newsletter/Newsletter';
 import Success from '../Success/Success';
 import './App.sass';
 
 function App() {
+  const [email, sentEmail] = useState('lol')
   return (
     <div className="App">
-      {/* <Newsletter /> */}
-      <Success/>
+      {email === 'lol' ?
+        <Newsletter sentEmail={sentEmail} />
+        :
+        <Success email={email} />
+      }
     </div>
   );
 }

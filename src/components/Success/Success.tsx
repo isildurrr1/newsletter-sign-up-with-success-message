@@ -1,9 +1,9 @@
 import './Success.sass'
 import image from '../../images/icon-success.svg'
-import { useState } from 'react'
+import React from 'react'
+import { SuccessProps } from '../../types/types'
 
-const Success = () => {
-  const [email, sentEmail] = useState('ash@loremcompany.com')
+const Success:React.FC<SuccessProps> = ({email}) => {
   return (
     <div className="success">
       <div className="container">
